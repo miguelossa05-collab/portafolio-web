@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Encabezado / Presentación -->
+  <header class="header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <h1>Portafolio</h1>
+    <div class="presentacion">
+      <img src="img/foto-perfil.jpg" alt="Foto de Miguel Ossa" class="foto-perfil">
+      <div class="datos-personales">
+        <h2>Miguel Ossa</h2>
+        <p class="carrera">Ingeniería de Sistemas</p>
+        <p class="descripcion">
+          Estudiante apasionado por el desarrollo web y la tecnología,
+          con interés en crear soluciones digitales creativas y funcionales.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Historial Académico -->
+  <section class="seccion" id="academico">
+    <div class="seccion-titulo">
+      <h2>Historial Académico</h2>
+      <button class="btn-agregar" id="btnAgregarAcademico">+ Agregar</button>
+    </div>
+
+    <!-- Formulario para registrar un nuevo estudio (oculto hasta que se pulse "+ Agregar") -->
+    <form class="form-agregar" id="formAcademico">
+      <input type="text" id="inputInstitucion" placeholder="Institución">
+      <input type="text" id="inputTituloAcademico" placeholder="Programa / Curso / Título">
+      <input type="text" id="inputPeriodoAcademico" placeholder="Año o período">
+      <p class="mensaje-error" id="errorAcademico"></p>
+      <button type="button" id="btnGuardarAcademico">Guardar</button>
+    </form>
+
+    <!-- Las tarjetas de este contenedor se generan con JavaScript (ver js/app.js) -->
+    <div class="tarjetas" id="listaAcademico"></div>
+  </section>
+
+  <!-- Historial Laboral -->
+  <section class="seccion" id="laboral">
+    <div class="seccion-titulo">
+      <h2>Historial Laboral</h2>
+      <button class="btn-agregar" id="btnAgregarLaboral">+ Agregar</button>
+    </div>
+
+    <!-- Formulario para registrar una nueva experiencia (oculto hasta que se pulse "+ Agregar") -->
+    <form class="form-agregar" id="formLaboral">
+      <input type="text" id="inputCargo" placeholder="Cargo">
+      <input type="text" id="inputEmpresa" placeholder="Empresa">
+      <input type="text" id="inputPeriodoLaboral" placeholder="Período">
+      <textarea id="inputDescripcionLaboral" placeholder="Descripción de tus funciones"></textarea>
+      <p class="mensaje-error" id="errorLaboral"></p>
+      <button type="button" id="btnGuardarLaboral">Guardar</button>
+    </form>
+
+    <!-- Las tarjetas de este contenedor se generan con JavaScript (ver js/app.js) -->
+    <div class="tarjetas" id="listaLaboral"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Portafolio Personal - 2026</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
